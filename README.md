@@ -3,7 +3,7 @@ YouTubeDimmer
 This is a project designed to 'dim' the YouTube background while watching videos.
 To get started, follow these instructions:  
 1. Bookmark this page. Yes you have to.  
-2. Go to [This page](https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/BookmarkletScript) and copy the entire page.  
+2. Go to [this page](https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/BookmarkletScript) and copy the entire page.  
 3. Edit that bookmark you made, and paste what you just copied into the "address" part.  
 4. Rename the bookmark whatever you want.  
 5. Go to <http://youtube.com>, choose a video, and click that bookmark!  
