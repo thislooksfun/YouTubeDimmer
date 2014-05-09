@@ -4,7 +4,7 @@ javascript:(
       var js = document.createElement('script');
       js.setAttribute('type', 'text/javascript');
       js.setAttribute('id', 'dimmerScript');
-      js.setAttribute('src', 'https://raw.githubusercontent.com/thislooksfun/YouTubeNightMode/master/DimTheLights/JavaScript/Dimmer.js');
+      js.setAttribute('src', 'https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/Dev/Dev_Dimmer.js');
       document.head.appendChild(js);
     }
  }()
