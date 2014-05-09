@@ -4,7 +4,7 @@ This is a project designed to 'dim' the YouTube background while watching videos
 To get started, follow these instructions:  
 1. Bookmark this page. Yes you have to.  
 2. Go to [this page](https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/BookmarkletScript) and copy the entire page.  
-3. Edit that bookmark you made (vague instructions because of browser differences), and paste what you just copied into the "address" part (That's the part that starts with something like "github.com". On some browsers you might have to choose "edit address" instead.  
+3. Edit that bookmark you made (vague instructions because of browser differences), and paste what you just copied into the "address" part (That's the part that starts with something like "github.com") On some browsers you might have to choose "edit address" instead.  
 4. Rename the bookmark whatever you want.  
 5. Go to <http://youtube.com>, choose a video, and click that bookmark!  
 6. To turn it off, simply press escape. If it doesn't work, try again. You might have had something selected. If it doesn't work after three tries, simply reload the page.  
