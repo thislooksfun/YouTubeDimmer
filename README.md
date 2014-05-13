@@ -6,6 +6,7 @@ To get started, simply drag [this link](javascript:(function(\){if(document.getE
 If you wish to install [my other project](https://github.com/thislooksfun/YouTubeNightMode) at the same time, (I don't see why you would, as it's very much not finished, but if you do,) follow the instructions above, but use [this link](https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/DualInstallationBookmarkletScript) instead.
 
 <a href="javascript:(function(){if(document.getElementById('dimmerScript')==null){var js=document.createElement('script');js.setAttribute('type','text/javascript');js.setAttribute('id','dimmerScript');js.setAttribute('src','https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/Dimmer.js');document.head.appendChild(js);}}())">this link</a>
+<a href="javascript:(function(){var s=document.createElement('script');s.src='http://kryogenix.org/code/browser/sorttable/sorttable.js';s.onload=function(){sorttable.init();Array.prototype.slice.call(document.getElementsByTagName('table')).forEach(function(t){sorttable.makeSortable(t);})};document.getElementsByTagName('head')[0].appendChild(s);})()">make tables sortable</a>
 
 =============
 This project is licenced under the GPL V2 licence. Full licence is included in the LICENCE file.
