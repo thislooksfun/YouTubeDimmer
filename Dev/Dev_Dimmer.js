@@ -16,6 +16,9 @@ dimmer.init = function()
       container.className = 'yt-uix-button-group';
       container.setAttribute('style', 'position: relative; right: 5px');
       var headUser = document.getElementById('yt-masthead-user');
+      if (headUser == null) {
+        headUser = document.getElementById('yt-masthead-signin');
+      }
       headUser.insertBefore(container, headUser.firstChild);
     }
 
