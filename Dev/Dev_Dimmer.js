@@ -17,7 +17,10 @@ dimmer.init = function()
       container.setAttribute('style', 'position: relative; right: 5px');
       var headUser = document.getElementById('yt-masthead-user');
       if (headUser == null) {
+        this.signedin = false;
         headUser = document.getElementById('yt-masthead-signin');
+      } else {
+        this.signedin = true;
       }
       headUser.insertBefore(container, headUser.firstChild);
     }
@@ -48,15 +51,7 @@ dimmer.init = function()
       }
     });
   } else {
-    this.dimmerButton = document.getElementById('dimmer');
-    this.divTop = document.getElementById('dimmerDivTop');
-    this.divLeft = document.getElementById('dimmerDivLeft');
-    this.divRight = document.getElementById('dimmerDivRight');
-    this.divBottom = document.getElementById('dimmerDivBottom');
-    this.divHeader = document.getElementById('dimmerDivHeader');
-    this.divPopouts = document.getElementsByName('dimmerDivPopout');
-    this.divMenu = document.getElementById('dimmerDivMenu');
-    this.isNight = (this.dimmerButton.innerHTML == "Dim")
+    console.log("Called again!");
   }
   
   this.uploader = (document.getElementsByClassName("yt-user-name")[0]).innerHTML;
@@ -106,10 +101,12 @@ dimmer.initDivs = function()
   this.divHeader.setAttribute('style', 'background: #000; opacity: 0.0; z-index: 2147483646; pointer-events: none; position: fixed');
   document.body.appendChild(this.divHeader);
   
-  this.divMenu = document.createElement('div');
-  this.divMenu.id = 'dimmerDivMenu';
-  this.divMenu.setAttribute('style', 'background: #000; opacity: 0.0; z-index: 2147483647; pointer-events: none; position: absolute')
-  document.getElementById('appbar-settings-menu').appendChild(this.divMenu);
+  if (this.signedin) {
+    this.divMenu = document.createElement('div');
+    this.divMenu.id = 'dimmerDivMenu';
+    this.divMenu.setAttribute('style', 'background: #000; opacity: 0.0; z-index: 2147483647; pointer-events: none; position: absolute')
+    document.getElementById('appbar-settings-menu').appendChild(this.divMenu);
+  }
   
   this.positionDivs();
 }
@@ -144,13 +141,13 @@ dimmer.positionDivs = function()
   this.divHeader.style.height = headerRect.bottom + "px";
   this.divHeader.style.width = "100%";
   
-  var menuRect = document.getElementById('appbar-settings-menu').getBoundingClientRect();
-  this.divMenu.style.left = "-1px";
-  this.divMenu.style.top = "-1px";
-  //this.divMenu.style.height = menuRect.height + "px";
-  //this.divMenu.style.width = menuRect.width + "px";
-  this.divMenu.style.height = "163px";
-  this.divMenu.style.width = "157px";
+  if (this.loggedin) {
+    var menuRect = document.getElementById('appbar-settings-menu').getBoundingClientRect();
+    this.divMenu.style.left = "-1px";
+    this.divMenu.style.top = "-1px";
+    this.divMenu.style.height = "163px";
+    this.divMenu.style.width = "157px";
+  }
   
   this.topPos = $('#dimmerDivBottom').offset().top;
 }
@@ -261,7 +258,9 @@ dimmer.setNight = function()
   this.divRight.style.opacity = this.opacity/100;
   this.divBottom.style.opacity = this.opacity/100;
   this.divHeader.style.opacity = this.opacity/100;
-  this.divMenu.style.opacity = this.opacity/100;
+  if (this.loggedin) {
+    this.divMenu.style.opacity = this.opacity/100;
+  }
   for (var i = 0; i < this.divPopouts.length; i++) {
     this.divPopouts[i].style.opacity = this.opacity/100;
   }
@@ -284,7 +283,9 @@ dimmer.setDay = function()
   this.divRight.style.opacity = this.opacity/100;
   this.divBottom.style.opacity = this.opacity/100;
   this.divHeader.style.opacity = this.opacity/100;
-  this.divMenu.style.opacity = this.opacity/100;
+  if (this.loggedin) {
+    this.divMenu.style.opacity = this.opacity/100;
+  }
   for (var i = 0; i < this.divPopouts.length; i++) {
     this.divPopouts[i].style.opacity = this.opacity/100;
   }
