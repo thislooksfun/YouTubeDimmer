@@ -69,7 +69,9 @@ dimmer.init = function()
   };
   $(window).scroll(fixDiv);
   
-  document.getElementById('appbar-settings-menu').style.zIndex = 2147483646;
+  if (this.loggedin) {
+    document.getElementById('appbar-settings-menu').style.zIndex = 2147483646;
+  }
   
   this.setState("night");
 }
