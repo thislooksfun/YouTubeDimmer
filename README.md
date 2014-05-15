@@ -1,7 +1,8 @@
 YouTubeDimmer
 =============
 This is a project designed to 'dim' the YouTube background while watching videos.
-To get started, follow these instructions:  
+To get started, go to [this page](http://www.repbot.org/thislooksfun/youtubedimmer.html)
+If you don't want to, follow these instuctions. (The link is much easier though.)
 1. Bookmark this page. Yes you have to.  
 2. Go to [this page](https://raw.githubusercontent.com/thislooksfun/YouTubeDimmer/master/BookmarkletScript) and copy the entire page.  
 3. Edit the bookmark you made in step 1 (vague instructions because of browser differences), and paste what you just copied into the "address" part (That's the part that starts with something like "github.com"). On some browsers you might have to choose "edit address" instead.  
